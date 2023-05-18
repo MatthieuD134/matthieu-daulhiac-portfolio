@@ -5,14 +5,18 @@ import { robotoMono } from './fonts';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <main
-      className={`p-4 min-h-screen bg-gradient-to-b from-bg-gradient-start to-bg dark:from-dark-bg-gradient-start dark:to-dark-bg text-black dark:text-white ${robotoMono.className}`}
-    >
-      <nav className="flex justify-end">
+    <>
+      <nav
+        className={`absolute w-full flex justify-end text-black dark:text-white ${robotoMono.className}`}
+      >
         <ThemeToggle />
         <LanguageSelector />
       </nav>
-      {children}
-    </main>
+      <main
+        className={`min-h-screen bg-gradient-to-b from-bg-gradient-start to-bg dark:from-dark-bg-gradient-start dark:to-dark-bg text-black dark:text-white ${robotoMono.className}`}
+      >
+        {children}
+      </main>
+    </>
   );
 }

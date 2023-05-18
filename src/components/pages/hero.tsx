@@ -1,4 +1,6 @@
 import { useRouter } from 'next/router';
+import { poppins } from '../base/fonts';
+import AnimatedSlideIcon from '../base/animated-slide-icon';
 
 const HERO_CONTENT = [
   {
@@ -13,7 +15,11 @@ const HERO_CONTENT = [
   },
   {
     locale: 'cn',
-    title: 'Matthieu Daulhiac - 马修',
+    title: (
+      <>
+        马<br />修
+      </>
+    ),
     subtitle: '软件工程师，区块链和前端开发',
   },
 ];
@@ -22,13 +28,18 @@ const Hero = () => {
   const { locale } = useRouter();
 
   return (
-    <section>
-      <h1>
+    <section className="max-w-5xl mx-auto min-h-screen p-4 flex flex-col justify-center items-center">
+      <h1
+        className={`text-center uppercase text-5xl md:text-9xl ${poppins.className} font-medium`}
+      >
         {HERO_CONTENT.find((content) => content.locale === locale)?.title}
       </h1>
-      <h3>
+      <h3 className="text-center uppercase text-xl md:text-2xl mt-8">
         {HERO_CONTENT.find((content) => content.locale === locale)?.subtitle}
       </h3>
+      <div className="absolute bottom-0 pb-20">
+        <AnimatedSlideIcon />
+      </div>
     </section>
   );
 };
