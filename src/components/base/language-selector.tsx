@@ -28,7 +28,7 @@ export default function LanguageSelector() {
 
   return (
     <div
-      className="flex flex-col relative m-2"
+      className="flex flex-col w-10 h-10 relative mx-2"
       ref={ref}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
@@ -36,30 +36,34 @@ export default function LanguageSelector() {
       onBlur={() => setIsFocused(false)}
     >
       <button
-        className="w-10 h-10 rounded-full bg-blue-500 uppercase"
-        onClick={() => setExtend((state) => !state)}
+        className="absolute z-10 w-full h-full rounded-full uppercase bg-surface dark:bg-dark-surface text-black dark:text-white"
+        onClick={(e) => {
+          e.currentTarget.blur();
+          setExtend((state) => !state);
+        }}
       >
         {router.locale}
       </button>
-      <span
-        className={`absolute top-10 grid transition-[grid-template-rows] ${
-          extend ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-        } `}
-      >
-        <span className="flex flex-col overflow-hidden">
-          {router.locales
-            ?.filter((loc) => loc !== router.locale)
-            .map((loc) => (
-              <button
-                className="w-10 h-10 rounded-full bg-blue-500 uppercase"
-                key={loc}
-                onClick={() => handleChangeLocale(loc)}
-              >
-                {loc}
-              </button>
-            ))}
-        </span>
-      </span>
+      {router.locales
+        ?.filter((loc) => loc !== router.locale)
+        .map((loc, index) => (
+          <button
+            className={`absolute w-full h-full rounded-full bg-green-500 uppercase ${
+              extend
+                ? index === 0
+                  ? `translate-y-[100%]`
+                  : `translate-y-[200%]`
+                : 'translate-y-[0]'
+            } transition-all duration-500 ease-in-out bg-surface dark:bg-dark-surface text-black dark:text-white`}
+            key={loc}
+            onClick={(e) => {
+              e.currentTarget.blur();
+              handleChangeLocale(loc);
+            }}
+          >
+            {loc}
+          </button>
+        ))}
     </div>
   );
 }

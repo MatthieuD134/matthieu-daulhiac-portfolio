@@ -4,7 +4,7 @@ import ThemeToggle from './theme-toggle';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <main className="p-4 min-h-screen dark:bg-[#222831] dark:text-white">
+    <main className="p-4 min-h-screen bg-gradient-to-b from-bg-gradient-start to-bg dark:from-dark-bg-gradient-start dark:to-dark-bg text-black dark:text-white">
       <nav className="flex justify-end">
         <ThemeToggle />
         <LanguageSelector />
