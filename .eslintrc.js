@@ -20,6 +20,9 @@ module.exports = {
         'next/core-web-vitals',
         'prettier',
       ],
+      rules: {
+        '@typescript-eslint/no-floating-promises': 'off',
+      },
     },
   ],
 };
