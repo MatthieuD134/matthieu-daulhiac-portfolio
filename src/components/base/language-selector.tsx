@@ -55,7 +55,7 @@ export default function LanguageSelector() {
                   : `translate-y-[200%]`
                 : 'translate-y-[0]'
             } transition-all duration-500 ease-in-out bg-surface dark:bg-dark-surface text-black dark:text-white`}
-            key={loc}
+            key={index}
             onClick={(e) => {
               e.currentTarget.blur();
               handleChangeLocale(loc);

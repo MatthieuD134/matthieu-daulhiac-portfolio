@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
-import { poppins } from '../base/fonts';
-import AnimatedSlideIcon from '../base/animated-slide-icon';
+import { poppins } from '../../base/fonts';
+import AnimatedSlideIcon from '../../base/animated-slide-icon';
 
 const HERO_CONTENT = [
   {
@@ -24,13 +24,15 @@ const HERO_CONTENT = [
   },
 ];
 
-const Hero = () => {
+const HeroSection = () => {
   const { locale } = useRouter();
 
   return (
-    <section className="max-w-5xl mx-auto min-h-screen p-4 flex flex-col justify-center items-center">
+    <section className="max-w-6xl mx-auto min-h-screen p-4 flex flex-col justify-center items-center">
       <h1
-        className={`text-center uppercase text-5xl md:text-9xl ${poppins.className} font-medium`}
+        className={`text-center uppercase ${
+          locale === 'cn' ? 'text-8xl' : 'text-5xl'
+        } md:text-9xl ${poppins.className} font-semibold`}
       >
         {HERO_CONTENT.find((content) => content.locale === locale)?.title}
       </h1>
@@ -44,4 +46,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;

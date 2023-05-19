@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <nav
-        className={`absolute w-full flex justify-end text-black dark:text-white ${robotoMono.className}`}
+        className={`absolute p-2 w-full flex justify-end text-black dark:text-white ${robotoMono.className}`}
       >
         <ThemeToggle />
         <LanguageSelector />
