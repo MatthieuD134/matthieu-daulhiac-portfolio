@@ -116,7 +116,7 @@ const TechStackSection = () => {
   );
 
   return (
-    <section className="max-w-6xl mx-auto min-h-screen px-4 py-10 flex flex-col">
+    <section className="max-w-6xl mx-auto px-4 py-10 flex flex-col">
       <h2
         className={`text-center uppercase text-4xl md:text-7xl ${poppins.className} font-semibold`}
       >

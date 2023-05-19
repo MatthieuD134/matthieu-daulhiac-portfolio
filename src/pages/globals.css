@@ -10,6 +10,16 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  overscroll-behavior: none;
+}
+
 * {
   box-sizing: border-box;
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-bg-gradient-start to-bg dark:from-dark-bg-gradient-start dark:to-dark-bg;
+  }
 }

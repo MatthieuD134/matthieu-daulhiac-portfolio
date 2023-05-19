@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <LanguageSelector />
       </nav>
       <main
-        className={`min-h-screen bg-gradient-to-b from-bg-gradient-start to-bg dark:from-dark-bg-gradient-start dark:to-dark-bg text-black dark:text-white ${robotoMono.className}`}
+        className={`min-h-screen text-black dark:text-white ${robotoMono.className}`}
       >
         {children}
       </main>
