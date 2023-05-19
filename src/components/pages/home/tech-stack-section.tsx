@@ -2,6 +2,8 @@ import { useRouter } from 'next/router';
 import { poppins } from '../../base/fonts';
 import EthereumLogo from '@/components/icons/ethereum-logo';
 import { useMemo } from 'react';
+import ReactLogo from '@/components/icons/react-logo';
+import MonitorLogo from '@/components/icons/monitor-logo';
 
 const TECH_STACK_TITLE = [
   {
@@ -10,7 +12,7 @@ const TECH_STACK_TITLE = [
   },
   {
     locale: 'fr',
-    title: '',
+    title: 'Stack Technique',
   },
   {
     locale: 'cn',
@@ -42,6 +44,54 @@ const SOLIDITY_DEVELOPMENT_CONTENT = [
   },
 ];
 
+const FRONT_END_DEVELOPMENT_CONTENT = [
+  {
+    locale: 'en',
+    title: 'Frontend Dev',
+    subtitle: 'React, NextJS',
+    content:
+      'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+  },
+  {
+    locale: 'fr',
+    title: 'Frontend Dev',
+    subtitle: 'React, NextJS',
+    content:
+      'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+  },
+  {
+    locale: 'cn',
+    title: '前端开发',
+    subtitle: 'React, NextJS',
+    content:
+      'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+  },
+];
+
+const SOFTWARE_DEVELOPMENT_CONTENT = [
+  {
+    locale: 'en',
+    title: 'Software',
+    subtitle: 'Development',
+    content:
+      'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+  },
+  {
+    locale: 'fr',
+    title: 'Developement',
+    subtitle: 'Logiciel',
+    content:
+      'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+  },
+  {
+    locale: 'cn',
+    title: ' 软件开发',
+    subtitle: 'Python, Typescript',
+    content:
+      'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+  },
+];
+
 const TechStackSection = () => {
   const { locale } = useRouter();
 
@@ -53,13 +103,15 @@ const TechStackSection = () => {
 
   const frontEndContent = useMemo(
     () =>
-      SOLIDITY_DEVELOPMENT_CONTENT.find((content) => content.locale === locale),
+      FRONT_END_DEVELOPMENT_CONTENT.find(
+        (content) => content.locale === locale
+      ),
     [locale]
   );
 
   const SoftwareDevContent = useMemo(
     () =>
-      SOLIDITY_DEVELOPMENT_CONTENT.find((content) => content.locale === locale),
+      SOFTWARE_DEVELOPMENT_CONTENT.find((content) => content.locale === locale),
     [locale]
   );
 
@@ -72,6 +124,24 @@ const TechStackSection = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 my-10 gap-5 md:gap-0">
         <div className=" border-2 p-8 border-solid border-gray-700 dark:border-gray-400 md:border-r-0">
+          <div className="flex items-center mb-4">
+            <ReactLogo className="w-10 h-10" />
+            <div className="ml-4">
+              <h3 className={`text-2xl font-semibold ${poppins.className}`}>
+                {frontEndContent?.title}
+                <br />
+
+                {frontEndContent?.subtitle}
+              </h3>
+            </div>
+          </div>
+          <div>
+            <p className="text-gray-700 dark:text-gray-400">
+              {frontEndContent?.content}
+            </p>
+          </div>
+        </div>
+        <div className=" border-2 p-8 border-solid border-gray-700 dark:border-gray-400">
           <div className="flex items-center mb-4">
             <EthereumLogo className="w-10 h-10" />
             <div className="ml-4">
@@ -89,27 +159,9 @@ const TechStackSection = () => {
             </p>
           </div>
         </div>
-        <div className=" border-2 p-8 border-solid border-gray-700 dark:border-gray-400">
-          <div className="flex items-center mb-4">
-            <EthereumLogo className="w-10 h-10" />
-            <div className="ml-4">
-              <h3 className={`text-2xl font-semibold ${poppins.className}`}>
-                {frontEndContent?.title}
-                <br />
-
-                {frontEndContent?.subtitle}
-              </h3>
-            </div>
-          </div>
-          <div>
-            <p className="text-gray-700 dark:text-gray-400">
-              {frontEndContent?.content}
-            </p>
-          </div>
-        </div>
         <div className=" border-2 p-8 border-solid border-gray-700 dark:border-gray-400 md:border-l-0">
           <div className="flex items-center mb-4">
-            <EthereumLogo className="w-10 h-10" />
+            <MonitorLogo className="w-10 h-10" />
             <div className="ml-4">
               <h3 className={`text-2xl font-semibold ${poppins.className}`}>
                 {SoftwareDevContent?.title}
