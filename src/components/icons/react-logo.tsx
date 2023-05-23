@@ -11,7 +11,7 @@ const ReactLogo = (props: SVGProps<SVGSVGElement>) => (
     {...props}
   >
     <circle cx="0" cy="0" r="2" fill="currentColor"></circle>
-    <g stroke="#149ECA" stroke-width="1" fill="none">
+    <g stroke="#149ECA" strokeWidth="1" fill="none">
       <ellipse rx="10" ry="4.5" stroke="currentColor" fill="none"></ellipse>
       <ellipse
         rx="10"

@@ -14,9 +14,9 @@ const MonitorLogo = (props: SVGProps<SVGSVGElement>) => (
       transform="translate(-2 -2)"
       fill="none"
       stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2px"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2px"
     ></path>
   </svg>
 );
