@@ -38,7 +38,7 @@ const MyWorkSection = () => {
       >
         {content?.title}
       </h2>
-      <p>{content?.content}</p>
+      <p className="my-10">{content?.content}</p>
     </section>
   );
 };

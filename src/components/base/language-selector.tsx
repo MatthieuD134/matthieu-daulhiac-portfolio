@@ -48,12 +48,14 @@ export default function LanguageSelector() {
         ?.filter((loc) => loc !== router.locale)
         .map((loc, index) => (
           <button
-            className={`absolute w-full h-full rounded-full bg-green-500 uppercase ${
+            className={`absolute w-full h-full rounded-full bg-green-500 uppercase
+            ${index === 0 ? 'delay-100' : 'delay-0'}
+            ${
               extend
                 ? index === 0
-                  ? `translate-y-[100%]`
-                  : `translate-y-[200%]`
-                : 'translate-y-[0]'
+                  ? `translate-y-[100%] scale-100`
+                  : `translate-y-[200%] scale-100`
+                : 'translate-y-[0] scale-0'
             } transition-all duration-500 ease-in-out bg-surface dark:bg-dark-surface text-black dark:text-white`}
             key={index}
             onClick={(e) => {
