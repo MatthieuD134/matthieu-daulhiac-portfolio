@@ -25,22 +25,36 @@ const SOLIDITY_DEVELOPMENT_CONTENT = [
     locale: 'en',
     title: 'Solidity',
     subtitle: 'Smart contracts',
-    content:
-      'Experience in developing smart contracts on mainnet, for standard NFTs (erc721, erc1155) as well as custom suite for DApp using different tools like Brownie, Hardhat, Remix',
+    content: (
+      <>
+        Experience in developing smart contracts on mainnet, for standard NFTs
+        (erc721, erc1155) as well as custom suite for DApp using different tools
+        like Brownie, Hardhat, Remix
+      </>
+    ),
   },
   {
     locale: 'fr',
     title: 'Solidity',
     subtitle: 'Contrats intelligents',
-    content:
-      'Expérience dans le développement de contrats intelligents sur mainnet, pour les NFT standard (erc721, erc1155) ainsi que des suites personnalisées pour DApp utilisant différents outils comme Brownie, Hardhat, Remix',
+    content: (
+      <>
+        Expérience dans le développement de contrats intelligents sur mainnet,
+        pour les NFT standard (erc721, erc1155) ainsi que des suites
+        personnalisées pour DApp utilisant différents outils comme Brownie,
+        Hardhat, Remix
+      </>
+    ),
   },
   {
     locale: 'cn',
     title: 'Solidity',
     subtitle: '智能合约开发',
-    content:
-      '在主网上开发智能合约的经验，用于标准NFT（erc721，erc1155）以及使用不同工具（如Brownie，Hardhat，Remix）为DApp定制的套件',
+    content: (
+      <>
+        在主网上开发智能合约的经验，用于标准NFT（erc721，erc1155）以及使用不同工具（如Brownie，Hardhat，Remix）为DApp定制的套件
+      </>
+    ),
   },
 ];
 
@@ -49,22 +63,34 @@ const FRONT_END_DEVELOPMENT_CONTENT = [
     locale: 'en',
     title: 'Frontend Dev',
     subtitle: 'React, NextJS',
-    content:
-      'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+    content: (
+      <>
+        Passionate about UI/UX. Experience in building webApps with HTML, CSS,
+        JS, React and NextJs frameworks.
+      </>
+    ),
   },
   {
     locale: 'fr',
     title: 'Frontend Dev',
     subtitle: 'React, NextJS',
-    content:
-      'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+    content: (
+      <>
+        Passionné par l&apos;UI/UX. Expérience dans la construction de webApps
+        avec les frameworks HTML, CSS, JS, React et NextJs.
+      </>
+    ),
   },
   {
     locale: 'cn',
     title: '前端开发',
     subtitle: 'React, NextJS',
-    content:
-      'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+    content: (
+      <>
+        热衷于UI / UX。
+        有使用HTML，CSS，JS，React和NextJs框架构建webApps的经验。
+      </>
+    ),
   },
 ];
 
@@ -73,22 +99,33 @@ const SOFTWARE_DEVELOPMENT_CONTENT = [
     locale: 'en',
     title: 'Software',
     subtitle: 'Development',
-    content:
-      'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+    content: (
+      <>
+        Experienced with both functional and object oriented programming, using
+        several languages like Python, Javascript or Typescript.
+      </>
+    ),
   },
   {
     locale: 'fr',
     title: 'Developement',
     subtitle: 'Logiciel',
-    content:
-      'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+    content: (
+      <>
+        Expérimenté avec la programmation fonctionnelle et orientée objet,
+        utilisant plusieurs langages comme Python, Javascript ou Typescript.
+      </>
+    ),
   },
   {
     locale: 'cn',
     title: ' 软件开发',
     subtitle: 'Python, Typescript',
-    content:
-      'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+    content: (
+      <>
+        有功能和面向对象编程的经验，使用多种语言，例如Python，Javascript或Typescript。
+      </>
+    ),
   },
 ];
 
