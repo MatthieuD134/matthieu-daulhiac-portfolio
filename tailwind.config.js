@@ -14,8 +14,8 @@ module.exports = {
         'dark-surface': '#3C495C',
         surface: '#FEFBF1',
 
-        primary: '#00ADB5',
-        secondary: '#8F0070',
+        primary: '#4da8b4',
+        secondary: '#b55b66',
       },
       keyframes: {
         slider: {
