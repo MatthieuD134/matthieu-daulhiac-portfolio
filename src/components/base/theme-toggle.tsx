@@ -1,5 +1,7 @@
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import { THEMES, useSetTheme, useTheme } from './theme-context';
+import MoonIcon from '../icons/moon-icon';
+import SunIcon from '../icons/sun-icon';
 
 export default function ThemeToggle() {
   const theme = useTheme();
@@ -13,5 +15,10 @@ export default function ThemeToggle() {
     }
   }, [theme, setTheme]);
 
-  return <button onClick={() => toggleTheme()}>{theme}</button>;
+  const currentIcon = useMemo(() => {
+    if (theme === THEMES.dark) return <MoonIcon />;
+    return <SunIcon />;
+  }, [theme]);
+
+  return <button onClick={() => toggleTheme()}>{currentIcon}</button>;
 }
