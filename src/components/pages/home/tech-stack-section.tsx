@@ -153,9 +153,12 @@ const TechStackSection = () => {
   );
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-10 flex flex-col">
+    <section
+      id="tech-stack"
+      className="max-w-6xl mx-auto px-4 py-16 flex flex-col"
+    >
       <h2
-        className={`text-center uppercase text-4xl md:text-7xl ${poppins.className} font-semibold`}
+        className={`text-center uppercase text-5xl md:text-7xl ${poppins.className} font-semibold`}
       >
         {TECH_STACK_TITLE.find((content) => content.locale === locale)?.title}
       </h2>

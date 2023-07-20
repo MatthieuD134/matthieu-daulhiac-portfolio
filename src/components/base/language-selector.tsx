@@ -1,8 +1,10 @@
 import useOnClickOutside from '@/hooks/use-on-click-outside';
 import { useRouter } from 'next/router';
-import { useEffect, useRef, useState } from 'react';
+import { ButtonHTMLAttributes, useEffect, useRef, useState } from 'react';
 
-export default function LanguageSelector() {
+export default function LanguageSelector(
+  props: ButtonHTMLAttributes<HTMLButtonElement>
+) {
   const router = useRouter();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -22,13 +24,19 @@ export default function LanguageSelector() {
   useOnClickOutside(ref, () => extend && setExtend(false));
 
   const handleChangeLocale = (locale: string) => {
-    router.push(router.asPath, router.asPath, { locale });
+    // push the new locale to the router, but remove the id anchor to avoid scrolling
+    router.push(router.asPath.split('#')[0], router.asPath.split('#')[0], {
+      locale,
+      scroll: false,
+    });
     setExtend(false);
   };
 
   return (
     <div
-      className="flex flex-col w-10 h-10 relative mx-2"
+      className={`flex flex-col w-10 h-10 relative ${
+        props.className ? props.className : ''
+      }`}
       ref={ref}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
