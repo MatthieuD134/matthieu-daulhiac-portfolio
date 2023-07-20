@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { poppins } from '../../base/fonts';
 import { useMemo } from 'react';
+import ProjectCard, { Project } from './project-card';
 
 const CONTENT = [
   {
@@ -23,6 +24,78 @@ const CONTENT = [
   },
 ];
 
+const PROJECTS: { locale: string; projects: Project[] }[] = [
+  {
+    locale: 'en',
+    projects: [
+      {
+        id: 1,
+        name: 'WrappedPunks',
+        description:
+          'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+        href: '#',
+        imageUrl: '/images/wrappedpunks.png',
+        tags: ['NFTs', 'Front-end', 'Smart-Contracts'],
+      },
+      {
+        id: 1,
+        name: 'OZU',
+        description:
+          'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+        href: '#',
+        imageUrl: '/images/ozu.webp',
+        tags: ['Comics', 'Full-Stack', 'Smart-Contracts'],
+      },
+    ],
+  },
+  {
+    locale: 'fr',
+    projects: [
+      {
+        id: 1,
+        name: 'WrappedPunks',
+        description:
+          'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+        href: '#',
+        imageUrl: '/images/wrappedpunks.png',
+        tags: ['NFTs', 'Front-end', 'Contrats-Intelligents'],
+      },
+      {
+        id: 1,
+        name: 'OZU',
+        description:
+          'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+        href: '#',
+        imageUrl: '/images/ozu.webp',
+        tags: ['Comics', 'Full-Stack', 'Contrats-Intelligents'],
+      },
+    ],
+  },
+  {
+    locale: 'cn',
+    projects: [
+      {
+        id: 1,
+        name: 'WrappedPunks',
+        description:
+          'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+        href: '#',
+        imageUrl: '/images/wrappedpunks.png',
+        tags: ['NFTs', '前段', '智能合约'],
+      },
+      {
+        id: 1,
+        name: 'OZU',
+        description:
+          'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+        href: '#',
+        imageUrl: '/images/ozu.webp',
+        tags: ['漫画', '全段', '智能合约'],
+      },
+    ],
+  },
+];
+
 const MyWorkSection = () => {
   const { locale } = useRouter();
 
@@ -41,7 +114,13 @@ const MyWorkSection = () => {
       >
         {content?.title}
       </h2>
-      <p className="my-10">{content?.content}</p>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-5 my-16">
+        {PROJECTS.find((project) => project.locale === locale)?.projects.map(
+          (project) => (
+            <ProjectCard key={project.id} project={project} />
+          )
+        )}
+      </div>
     </section>
   );
 };

@@ -68,7 +68,7 @@ const AboutMeSection = () => {
         <div className="relative h-full w-full min-h-[500px]">
           <Image
             alt=""
-            src="/about-me-illustration.png"
+            src="/images/about-me-illustration.png"
             fill
             style={{ objectFit: 'contain', objectPosition: 'center' }}
           />
