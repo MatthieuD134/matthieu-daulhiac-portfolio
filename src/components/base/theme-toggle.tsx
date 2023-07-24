@@ -1,9 +1,11 @@
-import { useCallback, useMemo } from 'react';
+import { ButtonHTMLAttributes, useCallback, useMemo } from 'react';
 import { THEMES, useSetTheme, useTheme } from './theme-context';
 import MoonIcon from '../icons/moon-icon';
 import SunIcon from '../icons/sun-icon';
 
-export default function ThemeToggle() {
+export default function ThemeToggle(
+  props: ButtonHTMLAttributes<HTMLButtonElement>
+) {
   const theme = useTheme();
   const setTheme = useSetTheme();
 
@@ -20,5 +22,12 @@ export default function ThemeToggle() {
     return <SunIcon />;
   }, [theme]);
 
-  return <button onClick={() => toggleTheme()}>{currentIcon}</button>;
+  return (
+    <button
+      className={`${props.className ? props.className : ''}`}
+      onClick={() => toggleTheme()}
+    >
+      {currentIcon}
+    </button>
+  );
 }

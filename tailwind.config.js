@@ -20,12 +20,12 @@ module.exports = {
       keyframes: {
         slider: {
           '0%, 100%': { transform: 'translateY(0)', opacity: 0 },
-          '60%': { transform: 'translateY(200%)', opacity: 1 },
-          '80%': { transform: 'translateY(200%)', opacity: 0 },
+          '60%': { transform: 'translateY(125%)', opacity: 1 },
+          '80%': { transform: 'translateY(125%)', opacity: 0 },
         },
       },
       animation: {
-        slider: 'slider 2s infinite',
+        slider: 'slider 1.5s infinite',
       },
     },
   },

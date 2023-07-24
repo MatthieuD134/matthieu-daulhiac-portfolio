@@ -31,7 +31,7 @@ const HeroSection = () => {
     <section className="max-w-6xl mx-auto min-h-screen p-4 flex flex-col justify-center items-center">
       <h1
         className={`text-center uppercase ${
-          locale === 'cn' ? 'text-8xl' : 'text-5xl'
+          locale === 'cn' ? 'text-8xl' : 'text-6xl'
         } md:text-9xl ${poppins.className} font-semibold`}
       >
         {HERO_CONTENT.find((content) => content.locale === locale)?.title}

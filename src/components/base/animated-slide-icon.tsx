@@ -1,7 +1,11 @@
+import ArrowDownIcon from '../icons/arrow-down-icon';
+
 export default function AnimatedSlideIcon() {
   return (
     <div className="relative w-8 h-16 border-solid border border-2 rounded-full border-black dark:border-white">
-      <div className="absolute m-2 w-1/2 aspect-square bg-black dark:bg-white rounded-full animate-slider" />
+      <div className="absolute w-full animate-slider">
+        <ArrowDownIcon className="mx-auto" />
+      </div>
     </div>
   );
 }
