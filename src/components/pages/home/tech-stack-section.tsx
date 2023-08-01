@@ -132,9 +132,18 @@ const SOFTWARE_DEVELOPMENT_CONTENT = [
 const TechStackSection = () => {
   const { locale } = useRouter();
 
+  const TechStackTitle = useMemo(
+    () =>
+      TECH_STACK_TITLE.find((content) => content.locale === locale) ||
+      TECH_STACK_TITLE[0],
+    [locale]
+  );
+
   const solidityContent = useMemo(
     () =>
-      SOLIDITY_DEVELOPMENT_CONTENT.find((content) => content.locale === locale),
+      SOLIDITY_DEVELOPMENT_CONTENT.find(
+        (content) => content.locale === locale
+      ) || SOLIDITY_DEVELOPMENT_CONTENT[0],
     [locale]
   );
 
@@ -142,13 +151,15 @@ const TechStackSection = () => {
     () =>
       FRONT_END_DEVELOPMENT_CONTENT.find(
         (content) => content.locale === locale
-      ),
+      ) || FRONT_END_DEVELOPMENT_CONTENT[0],
     [locale]
   );
 
   const SoftwareDevContent = useMemo(
     () =>
-      SOFTWARE_DEVELOPMENT_CONTENT.find((content) => content.locale === locale),
+      SOFTWARE_DEVELOPMENT_CONTENT.find(
+        (content) => content.locale === locale
+      ) || SOFTWARE_DEVELOPMENT_CONTENT[0],
     [locale]
   );
 
@@ -160,7 +171,7 @@ const TechStackSection = () => {
       <h2
         className={`text-center uppercase text-5xl md:text-7xl ${poppins.className} font-semibold`}
       >
-        {TECH_STACK_TITLE.find((content) => content.locale === locale)?.title}
+        {TechStackTitle.title}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 my-10 gap-5 md:gap-0">
         <div className=" border-2 p-8 border-solid border-gray-700 dark:border-gray-400 md:border-r-0">
@@ -168,10 +179,10 @@ const TechStackSection = () => {
             <ReactLogo className="w-10 h-10" />
             <div className="ml-4">
               <h3 className={`text-2xl font-semibold ${poppins.className}`}>
-                {frontEndContent?.title}
+                {frontEndContent.title}
                 <br />
 
-                {frontEndContent?.subtitle}
+                {frontEndContent.subtitle}
               </h3>
             </div>
           </div>
@@ -186,16 +197,16 @@ const TechStackSection = () => {
             <EthereumLogo className="w-10 h-10" />
             <div className="ml-4">
               <h3 className={`text-2xl font-semibold ${poppins.className}`}>
-                {solidityContent?.title}
+                {solidityContent.title}
                 <br />
 
-                {solidityContent?.subtitle}
+                {solidityContent.subtitle}
               </h3>
             </div>
           </div>
           <div>
             <p className="text-gray-700 dark:text-gray-400">
-              {solidityContent?.content}
+              {solidityContent.content}
             </p>
           </div>
         </div>
@@ -204,16 +215,16 @@ const TechStackSection = () => {
             <MonitorLogo className="w-10 h-10" />
             <div className="ml-4">
               <h3 className={`text-2xl font-semibold ${poppins.className}`}>
-                {SoftwareDevContent?.title}
+                {SoftwareDevContent.title}
                 <br />
 
-                {SoftwareDevContent?.subtitle}
+                {SoftwareDevContent.subtitle}
               </h3>
             </div>
           </div>
           <div>
             <p className="text-gray-700 dark:text-gray-400">
-              {SoftwareDevContent?.content}
+              {SoftwareDevContent.content}
             </p>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { robotoMono } from './fonts';
 import MobileMenu from './mobile-menu';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import ContactMe from './contact-me';
 
 const DESKTOP_MENU_CONTENT = [
   {
@@ -95,6 +96,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         className={`min-h-screen text-black dark:text-white ${robotoMono.className} max-w-screen overflow-x-hidden`}
       >
         {children}
+        <ContactMe />
       </main>
     </>
   );

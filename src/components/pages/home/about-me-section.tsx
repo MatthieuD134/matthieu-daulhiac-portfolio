@@ -44,7 +44,7 @@ const AboutMeSection = () => {
   const { locale } = useRouter();
 
   const content = useMemo(
-    () => CONTENT.find((content) => content.locale === locale),
+    () => CONTENT.find((content) => content.locale === locale) || CONTENT[0],
     [locale]
   );
 
@@ -62,7 +62,6 @@ const AboutMeSection = () => {
           </h2>
 
           <p className="my-10 text-lg">{content?.content}</p>
-          <button />
           <Button>{content?.button}</Button>
         </div>
         <div className="relative h-full w-full min-h-[500px]">

@@ -27,6 +27,9 @@ module.exports = {
       animation: {
         slider: 'slider 1.5s infinite',
       },
+      screens: {
+        tall: { min: '56rem' },
+      },
     },
   },
   plugins: [],
