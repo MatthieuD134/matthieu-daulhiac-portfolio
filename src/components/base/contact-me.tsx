@@ -15,7 +15,7 @@ import { toast } from 'react-toastify';
 import WeChatLogo from '../icons/wechat-logo';
 import LinkedInLogo from '../icons/linkedin-logo';
 import GithubLogo from '../icons/github-logo';
-import { GITHUB_LINK, LINKEDIN_LINK, WECHAT_LINK } from '@/constants/links';
+import { GITHUB_LINK, LINKEDIN_LINK, WECHAT_ACCOUNT } from '@/constants/links';
 
 const CONTENT = [
   {
@@ -38,6 +38,7 @@ const CONTENT = [
     },
     or: 'Or',
     socialsLabel: 'Find me on my socials',
+    wechatId: 'WeChat ID:',
   },
   {
     locale: 'fr',
@@ -59,6 +60,7 @@ const CONTENT = [
     },
     or: 'Ou',
     socialsLabel: 'Retrouvez-moi sur mes réseaux sociaux',
+    wechatId: 'ID WeChat:',
   },
   {
     locale: 'cn',
@@ -80,6 +82,7 @@ const CONTENT = [
     },
     or: '要么',
     socialsLabel: '在我的社交媒体上找到我',
+    wechatId: '微信号：',
   },
 ];
 
@@ -180,7 +183,7 @@ export default function ContactMe() {
                 }}
                 ref={formRef}
               >
-                <div className="px-4 py-8 mx-auto max-w-xl flex flex-col gap-4">
+                <div className="px-4 pt-8 mx-auto max-w-xl flex flex-col gap-4">
                   <div className="w-full">
                     <input
                       tabIndex={isOpen ? 0 : -1}
@@ -231,41 +234,42 @@ export default function ContactMe() {
                       ? content.buttonProcessingLabel
                       : content.buttonLabel}
                   </Button>
-                  <div className="flex flex-col">
-                    <div className="w-full flex justify-center items-center gap-4 opacity-70">
-                      <div className="w-4/12 h-px bg-black dark:bg-white" />
-                      <div>{content.or}</div>
-                      <div className="w-4/12 h-px bg-black dark:bg-white" />
-                    </div>
-                    <span className="text-center mt-4">
-                      {content.socialsLabel}
-                    </span>
-                    <div className="flex justify-center items-center gap-4 mt-4">
-                      <a
-                        href={WECHAT_LINK}
-                        aria-label="wechat link"
-                        target="blank"
-                      >
-                        <WeChatLogo className="fill-black dark:fill-white" />
-                      </a>
-                      <a
-                        href={LINKEDIN_LINK}
-                        aria-label="LinkedIn link"
-                        target="blank"
-                      >
-                        <LinkedInLogo className="fill-black dark:fill-white" />
-                      </a>
-                      <a
-                        href={GITHUB_LINK}
-                        aria-label="github link"
-                        target="blank"
-                      >
-                        <GithubLogo className="fill-black dark:fill-white" />
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </form>
+              <div className="w-full max-w-xl mx-auto flex flex-col pt-4 pb-8">
+                <div className="flex justify-center items-center gap-4 opacity-70">
+                  <div className="w-4/12 h-px bg-black dark:bg-white" />
+                  <div>{content.or}</div>
+                  <div className="w-4/12 h-px bg-black dark:bg-white" />
+                </div>
+                <span className="text-center mt-4">{content.socialsLabel}</span>
+                <div className="flex justify-center items-center gap-4 mt-4">
+                  <button
+                    className="group relative flex justify-center items-center"
+                    aria-label="show wechat account button"
+                  >
+                    <WeChatLogo className="fill-black dark:fill-white" />
+                    <span
+                      className={`group/tooltip pointer-events-none absolute -top-20 -left-12 w-max opacity-0 transition-opacity group-hover:opacity-100 group-focus:opacity-100 bg-bg-gradient-start dark:bg-dark-bg p-4 border border-black dark:border-white`}
+                    >
+                      <p className="opacity-70 text-xs text-left">
+                        {content.wechatId}
+                      </p>
+                      <p className="text-sm">{WECHAT_ACCOUNT}</p>
+                    </span>
+                  </button>
+                  <a
+                    href={LINKEDIN_LINK}
+                    aria-label="LinkedIn link"
+                    target="blank"
+                  >
+                    <LinkedInLogo className="fill-black dark:fill-white" />
+                  </a>
+                  <a href={GITHUB_LINK} aria-label="github link" target="blank">
+                    <GithubLogo className="fill-black dark:fill-white" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
