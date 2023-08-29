@@ -1,4 +1,5 @@
 import Button from '@/components/base/button/button';
+import LinkButton from '@/components/base/button/link-button';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useMemo } from 'react';
@@ -52,9 +53,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
           ))}
         </span>
       </div>
-      <div>
-        <Button className="text-sm md:text-md">{buttonText}</Button>
-      </div>
+      <LinkButton
+        href={project.href}
+        target="blank"
+        className="text-sm md:text-md"
+      >
+        {buttonText}
+      </LinkButton>
     </div>
   );
 };

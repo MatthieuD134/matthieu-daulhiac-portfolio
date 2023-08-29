@@ -12,7 +12,7 @@ const PROJECTS: { locale: string; projects: Project[] }[] = [
         name: 'WrappedPunks',
         description:
           'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        href: '#',
+        href: 'https://wrappedpunks.com/',
         imageUrl: '/images/wrappedpunks.png',
         tags: ['NFTs', 'Front-end', 'Smart-Contracts'],
       },
@@ -21,7 +21,7 @@ const PROJECTS: { locale: string; projects: Project[] }[] = [
         name: 'OZU',
         description:
           'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        href: '#',
+        href: 'https://ozu.io/',
         imageUrl: '/images/ozu.webp',
         tags: ['Comics', 'Full-Stack', 'Smart-Contracts'],
       },
@@ -35,7 +35,7 @@ const PROJECTS: { locale: string; projects: Project[] }[] = [
         name: 'WrappedPunks',
         description:
           'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        href: '#',
+        href: 'https://wrappedpunks.com/',
         imageUrl: '/images/wrappedpunks.png',
         tags: ['NFTs', 'Front-end', 'Contrats-Intelligents'],
       },
@@ -44,7 +44,7 @@ const PROJECTS: { locale: string; projects: Project[] }[] = [
         name: 'OZU',
         description:
           'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        href: '#',
+        href: 'https://ozu.io/',
         imageUrl: '/images/ozu.webp',
         tags: ['Comics', 'Full-Stack', 'Contrats-Intelligents'],
       },
@@ -58,7 +58,7 @@ const PROJECTS: { locale: string; projects: Project[] }[] = [
         name: 'WrappedPunks',
         description:
           'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        href: '#',
+        href: 'https://wrappedpunks.com/',
         imageUrl: '/images/wrappedpunks.png',
         tags: ['NFTs', '前段', '智能合约'],
       },
@@ -67,7 +67,7 @@ const PROJECTS: { locale: string; projects: Project[] }[] = [
         name: 'OZU',
         description:
           'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        href: '#',
+        href: 'https://ozu.io/',
         imageUrl: '/images/ozu.webp',
         tags: ['漫画', '全段', '智能合约'],
       },
