@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { poppins } from '../../base/fonts';
 import { useMemo } from 'react';
 import Image from 'next/image';
-import Button from '@/components/base/button/button';
+import LinkButton from '@/components/base/button/link-button';
 
 const CONTENT = [
   {
@@ -62,7 +62,9 @@ const AboutMeSection = () => {
           </h2>
 
           <p className="my-10 text-lg">{content?.content}</p>
-          <Button>{content?.button}</Button>
+          <LinkButton href="/docs/resume-EN-CN.pdf" target="blank">
+            {content?.button}
+          </LinkButton>
         </div>
         <div className="relative h-full w-full min-h-[500px]">
           <Image

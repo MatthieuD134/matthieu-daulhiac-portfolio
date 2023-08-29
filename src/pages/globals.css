@@ -26,3 +26,17 @@ body {
     @apply bg-gradient-to-b from-bg-gradient-start to-bg dark:from-dark-bg-gradient-start dark:to-dark-bg;
   }
 }
+
+@layer components {
+  .text-stroke-white {
+    color: transparent;
+    -webkit-text-stroke: 3px theme('colors.primary');
+    opacity: .33;
+  }
+
+  .text-stroke-black {
+    color: transparent;
+    -webkit-text-stroke: 3px theme('colors.secondary');
+    opacity: .33;
+  }
+}

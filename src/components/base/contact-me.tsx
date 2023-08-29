@@ -247,6 +247,7 @@ export default function ContactMe() {
                   <button
                     className="group relative flex justify-center items-center"
                     aria-label="show wechat account button"
+                    tabIndex={isOpen ? 0 : -1}
                   >
                     <WeChatLogo className="fill-black dark:fill-white" />
                     <span
@@ -262,10 +263,16 @@ export default function ContactMe() {
                     href={LINKEDIN_LINK}
                     aria-label="LinkedIn link"
                     target="blank"
+                    tabIndex={isOpen ? 0 : -1}
                   >
                     <LinkedInLogo className="fill-black dark:fill-white" />
                   </a>
-                  <a href={GITHUB_LINK} aria-label="github link" target="blank">
+                  <a
+                    href={GITHUB_LINK}
+                    aria-label="github link"
+                    target="blank"
+                    tabIndex={isOpen ? 0 : -1}
+                  >
                     <GithubLogo className="fill-black dark:fill-white" />
                   </a>
                 </div>

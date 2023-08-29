@@ -48,9 +48,19 @@ module.exports = {
           '60%': { transform: 'translateY(125%)', opacity: 1 },
           '80%': { transform: 'translateY(125%)', opacity: 0 },
         },
+        slideInLeft: {
+          '0%': { transform: 'translateX(25%)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
+        slideInRight: {
+          '0%': { transform: 'translateX(-25%)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
       },
       animation: {
         slider: 'slider 1.5s infinite',
+        slideInLeft: 'slideInLeft 1s ease-out',
+        slideInRight: 'slideInRight 1s ease-out',
       },
       screens: {
         tall: { min: '56rem' },
