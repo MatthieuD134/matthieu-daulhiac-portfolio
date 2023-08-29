@@ -1,4 +1,3 @@
-import Button from '@/components/base/button/button';
 import LinkButton from '@/components/base/button/link-button';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
