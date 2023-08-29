@@ -80,7 +80,7 @@ const CONTENT = [
         max: '信息必须少于1000个字符',
       },
     },
-    or: '要么',
+    or: '更多方式',
     socialsLabel: '在我的社交媒体上找到我',
     wechatId: '微信号：',
   },
