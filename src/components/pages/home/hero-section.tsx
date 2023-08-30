@@ -14,7 +14,7 @@ const HERO_CONTENT = [
     locale: 'fr',
     title: 'Matthieu Daulhiac',
     subtitle: 'Ingénieur logiciel, Dévelopement front-end & Blockchain',
-    welcome: 'BIENVENU',
+    welcome: 'BIENVENUE',
   },
   {
     locale: 'cn',
@@ -58,7 +58,7 @@ const HeroSection = () => {
               locale === 'cn'
                 ? 'text-[min(40vw,20rem)]'
                 : locale === 'fr'
-                ? 'text-[min(20vw,20rem)]'
+                ? 'text-[min(18vw,20rem)]'
                 : 'text-[min(23vw,20rem)]'
             } text-center text-stroke-black dark:text-stroke-white w-max font-bold mx-auto`}
           >
