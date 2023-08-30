@@ -5,11 +5,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import emailjs from 'emailjs-com';
-import {
-  PUBLIC_KEY,
-  SERVICE_ID,
-  TEMPLATE_ID,
-} from '@/constants/emailjs-config';
+import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '@/constants/env';
 import Button from './button/button';
 import { toast } from 'react-toastify';
 import WeChatLogo from '../icons/wechat-logo';
